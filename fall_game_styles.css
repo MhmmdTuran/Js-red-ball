@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#game{
+    width: 1376px;
+    height: 635px;
+    border: 10px solid black;
+    margin: auto;
+}
+
+#ball{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    position:  relative;  
+    top: 440px;
+    left: 190px;
+    z-index: 1000000;
+     
+}
+
+.block{
+    width: 1376px;
+    height: 25px;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    margin-top: -25px;
+}
+
+.hole{
+    width: 200px;
+    height: 25px;
+    background-color: white;
+    position: relative;
+    top: 100px;
+    margin-top: -25px;
+}
+
+ body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+    p3 {
+    font-size: calc( 1em + 30vmin );
+    font-weight: 900;
+    color: tomato;
+    
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: rgb(174, 156, 201);
+    --stroke-color: lightblue;
+    
+    text-shadow: 
+      
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      var(--background-color), 
+      
+      calc( var(--x-offset) - var(--stroke) )
+      calc( var(--y-offset) + var(--stroke) )
+      0px
+      var(--stroke-color);
+  } 
+
+
+#TryAgainButton{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+    background-color: green;
+    border: 2px solid black;
+    z-index: 10000001;
+}
+
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    }
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+.score{
+    font-size: 28px;
+    text-align: center;
+    color: red;
+    z-index: 10000001;
+    position: absolute;
+    top: 56%;
+    left: 40%;
+}
+
+  @supports ( text-shadow: 1px 1px 1px 1px black ) {
+    p3 {
+      text-shadow:
+        
+        var(--x-offset)
+        var(--y-offset)
+        0px
+        0px
+        var(--background-color), 
+        
+        var(--x-offset) 
+        var(--y-offset)
+        var(--stroke)
+        0px
+        var(--stroke-color);
+      
+    }
+  }
+
+#highScore{
+    font-size:38px;
+    top: 8%;
+    left: 3%;
+}
+
